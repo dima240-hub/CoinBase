@@ -1,58 +1,64 @@
 import {StyleSheet} from 'react-native';
-import {Dimensions} from 'react-native';
-const windowHeight = Dimensions.get('window').height;
-const windowWidth = Dimensions.get('window').width;
 
 export default StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#e5e5e5',
+  },
+  scrollView: {
+    flex: 1,
+  },
+  scrollViewContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   text: {
     color: 'grey',
-    left: windowWidth * 0.055,
-    marginBottom: windowHeight * 0.04,
+    left: 20,
+    marginBottom: 20,
     alignSelf: 'flex-start',
-    marginTop: windowHeight * 0.03,
+    marginTop: 20,
   },
   rectangle: {
+    flexDirection: 'column',
     borderWidth: 1,
-
-    width: windowWidth,
-    height: windowHeight * 0.42,
+    width: '100%',
+    height: 280,
     borderTopLeftRadius: 150,
     borderTopRightRadius: 150,
     borderColor: 'white',
   },
 
-  cardContainer: {
-    borderRadius: 15,
-    width: windowWidth * 0.9,
-    height: windowHeight * 0.3,
-    alignSelf: 'center',
+  fixText: {
+    flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    shadowColor: 'black',
-
-    elevation: 60,
-  },
-
-  bitcoinImage: {
-    aspectRatio: 1 * 3.3,
-  },
-  bitcoinVectorImage: {
-    width: windowWidth * 0.06,
-    height: windowHeight * 0.03,
-    left: windowWidth * 0.85,
-    bottom: windowHeight * 0.28,
+    top: 20,
   },
   text1: {textAlign: 'center', color: 'white', fontWeight: 'bold'},
+  cardText1: {
+    textAlign: 'center',
+    color: 'white',
+    fontWeight: '200',
+    top: 20,
+  },
   cardText: {
     textAlign: 'center',
     color: 'white',
     fontWeight: '200',
   },
+  marginText: {
+    marginTop: 10,
+  },
+  valueText1: {color: 'black', fontSize: 20},
+  buttonMargin: {
+    marginVertical: 30,
+  },
   valueContainer: {
     borderWidth: 1,
     borderRadius: 10,
-    width: windowWidth * 0.83,
-    height: windowHeight * 0.085,
+    width: '83%',
+    height: 60,
     justifyContent: 'center',
     borderColor: 'grey',
     marginTop: 20,
@@ -61,15 +67,15 @@ export default StyleSheet.create({
     color: 'black',
     fontWeight: '500',
     fontSize: 18,
-    left: windowWidth * 0.055,
+    left: 20,
   },
   dotBorder: {
     borderWidth: 2,
-    height: windowHeight * 0.11,
-    width: windowWidth * 0.6,
+    height: 70,
+    width: '60%',
     borderStyle: 'dashed',
     borderColor: '#ff1493',
-    marginTop: windowHeight * 0.07,
+    marginTop: 30,
     alignItems: 'center',
     justifyContent: 'center',
   },

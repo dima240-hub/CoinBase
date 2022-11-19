@@ -1,17 +1,15 @@
-import React, {useState} from 'react';
-import {View, Image, Text, TouchableOpacity, ScrollView} from 'react-native';
+import React from 'react';
+import {View, Image, ScrollView} from 'react-native';
 import styles from './ForgotPasswordScreen.componenet.style';
 import InputsForm from '../components/InputsForm';
 import ButtonsForm from '../components/ButtonsForm';
-import {Input} from 'react-native-elements';
 import BigTextForm from '../components/BigTextForm';
-import LinearGradient from 'react-native-linear-gradient';
 import LittleTextForm from '../components/LittleTextForm';
 import BackButtonForm from '../components/BackButtonForm';
 const ForgotPasswordScreen = ({navigation}) => {
   return (
     <ScrollView
-      style={{flex: 1, backgroundColor: '#e5e5e5'}}
+      style={styles.scrollView}
       contentContainerstyle={styles.container}>
       <BackButtonForm navigateTo={() => navigation.navigate('Login')} />
 
@@ -35,8 +33,9 @@ const ForgotPasswordScreen = ({navigation}) => {
       <LittleTextForm
         text={`How well we communicate is${'\n'} determined not by how well we say${'\n'} things, but how well we are${'\n'} understood.`}
       />
-
-      <ButtonsForm text="SUBMIT" />
+      <View style={styles.scrollViewFix}>
+        <ButtonsForm text="SUBMIT" />
+      </View>
     </ScrollView>
   );
 };

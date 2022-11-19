@@ -1,11 +1,10 @@
 import * as React from 'react';
 import {useState} from 'react';
-import {Touchable} from 'react-native';
+
 import {Text, View, FlatList, Image, TouchableOpacity} from 'react-native';
 import styles from './ChatForm.componenent.style';
 import Swipeable from 'react-native-gesture-handler/Swipeable';
 import LinearGradient from 'react-native-linear-gradient';
-import style from 'react-native-password-strength-meter/src/style';
 
 const ChatForm = () => {
   const DATA = [
@@ -13,7 +12,6 @@ const ChatForm = () => {
       id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
       name: 'Agent Rose',
       text: 'Ok. Please kindly take the picture of the card front and back view...',
-      image: '../../Images/Chat1.png', // am incercat sa fac si nu a mers , gen sa ii dau cu require si am pus doar cerculetul , am zis ca in real o sa fie o baza de date cu pozele
     },
     {
       id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
@@ -82,7 +80,7 @@ const ChatForm = () => {
         ref={ref => (row[index] = ref)}
         rightOpenValue={-100}>
         <View style={styles.swipeContainer}>
-          <View style={{flexDirection: 'row', marginLeft: 20}}>
+          <View style={styles.fixChats}>
             <View style={styles.profile}>
               <Image
                 style={styles.image}

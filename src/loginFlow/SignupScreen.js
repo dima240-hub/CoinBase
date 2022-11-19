@@ -10,7 +10,9 @@ const SignupScreen = ({navigation}) => {
   const [password, setPassword] = useState('');
 
   return (
-    <ScrollView style={{flex: 1}} contentContainerStyle={styles.container}>
+    <ScrollView
+      style={styles.scrollView}
+      contentContainerStyle={styles.container}>
       <BackButtonForm navigateTo={() => navigation.navigate('Login')} />
 
       <View style={styles.imageContainer}>
@@ -19,7 +21,7 @@ const SignupScreen = ({navigation}) => {
           source={require('../../Images/Profile.png')}
         />
       </View>
-      <View style={{marginBottom: 20}}>
+      <View style={styles.textMargin}>
         <LittleTextForm
           text={`  Innovation distinguishes between a leader and a ${'\n'}follower`}
         />
@@ -53,14 +55,14 @@ const SignupScreen = ({navigation}) => {
         imgstyle={styles.pass}
         imgsource={require('../../Images/Pass.png')}
       />
-      <View style={{marginTop: 20}}>
+      <View style={styles.marginPass}>
         {password && <BarPasswordStrengthDisplay password={password} />}
       </View>
 
       <ButtonsForm text="SIGNUP" />
 
       <Text style={styles.text}>or</Text>
-      <View style={{alignItems: 'center', marginBottom: 30}}>
+      <View style={styles.socialFix}>
         <LittleTextForm text="Signup with a social account" />
         <View style={styles.socialContainer}>
           <Image

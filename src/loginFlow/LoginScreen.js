@@ -5,7 +5,7 @@ import styles from './LoginScreen.componenet.style';
 import InputsForm from '../components/InputsForm';
 import ButtonsForm from '../components/ButtonsForm';
 import LittleTextForm from '../components/LittleTextForm';
-import style from 'react-native-password-strength-meter/src/style';
+
 const LoginScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
@@ -37,6 +37,7 @@ const LoginScreen = ({navigation}) => {
         <LittleTextForm text="Forgot Your Password ?" />
       </TouchableOpacity>
       <TouchableOpacity
+        style={styles.logginButtonFix}
         onPress={() => {
           navigation.navigate('NavigationBar');
           setTimeout(() => {
@@ -63,11 +64,7 @@ const LoginScreen = ({navigation}) => {
           />
         </View>
       </View>
-      <View
-        style={{
-          justifyContent: 'flex-end',
-          flex: 1,
-        }}>
+      <View style={styles.signupFix}>
         <TouchableOpacity
           style={{}}
           onPress={() => navigation.navigate('Signup')}>
@@ -77,7 +74,7 @@ const LoginScreen = ({navigation}) => {
             colors={[`#ff1493`, `#8a2be2`]}
             start={{x: 0, y: 0}}
             end={{x: 0, y: 1}}>
-            <View style={{flexDirection: 'row', alignSelf: 'center'}}>
+            <View style={styles.firstTextButton}>
               <Text style={styles.button2Text1}>
                 Do not have an acccount ?{' '}
               </Text>

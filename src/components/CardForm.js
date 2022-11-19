@@ -5,22 +5,26 @@ import LinearGradient from 'react-native-linear-gradient';
 
 const CardForm = () => {
   return (
-    <View style={{}}>
-      <LinearGradient
-        style={styles.cardContainer}
-        colors={['#E34141', `#FF8000`]}
-        start={{x: 0, y: 1}}
-        end={{x: 0, y: 0}}>
-        <Image
-          style={styles.bitcoinImage}
-          source={require('../../Images/bitcoinImage.png')}
-        />
-      </LinearGradient>
-      <Image
-        style={styles.bitcoinVectorImage}
-        source={require('../../Images/bitcoinVector.png')}
-      />
-    </View>
+    <LinearGradient
+      style={styles.cardContainer}
+      colors={['#E34141', `#FF8000`]}
+      start={{x: 0, y: 1}}
+      end={{x: 0, y: 0}}>
+      <View style={styles.fixImages}>
+        <View style={styles.fixVectorImage}>
+          <Image
+            style={styles.bitcoinVectorImage}
+            source={require('../../Images/bitcoinVector.png')}
+          />
+        </View>
+        <View style={styles.fixBitcoinImage}>
+          <Image
+            style={styles.bitcoinImage}
+            source={require('../../Images/bitcoinImage.png')}
+          />
+        </View>
+      </View>
+    </LinearGradient>
   );
 };
 export default CardForm;

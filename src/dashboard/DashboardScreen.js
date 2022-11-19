@@ -7,15 +7,15 @@ import BackButtonForm from '../components/BackButtonForm';
 import CardForm from '../components/CardForm';
 const DashboardScreen = ({navigation}) => {
   return (
-    <ScrollView style={{flex: 1}}>
+    <ScrollView style={styles.scrollView}>
       <BackButtonForm
         navigateTo={() => navigation.navigate('NavigationBar')}
         imgsource={require('../../Images/Profilepic.png')}
       />
-      <View style={{flex: 1}}>
-        <View style={{marginLeft: 15, marginTop: 20}}>
+      <View style={styles.container}>
+        <View style={styles.fixContainer}>
           <LinearTextGradient
-            style={{fontSize: 25}}
+            style={styles.fontsizeText}
             locations={[0, 1]}
             colors={[`#ff1493`, `#8a2be2`]}
             start={{x: 0, y: 0}}

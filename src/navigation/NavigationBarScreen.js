@@ -1,12 +1,11 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {Text, View, Image, TouchableOpacity} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
-import BackButtonForm from '../components/BackButtonForm';
 import BigTextForm from '../components/BigTextForm';
 import styles from './NavigationBarScreen.componenet.style';
 const NavigationBarScreen = ({navigation}) => {
   return (
-    <View style={{flex: 1}}>
+    <View style={styles.fullcontainer}>
       <View style={styles.container}>
         <View style={styles.imageContainer}>
           <Image
@@ -17,7 +16,7 @@ const NavigationBarScreen = ({navigation}) => {
         <View>
           <BigTextForm text="BosunJones" />
         </View>
-        <View style={{flexDirection: 'row'}}>
+        <View style={styles.fixFlexImg}>
           <View style={styles.imageContainer1}>
             <Image
               style={styles.image}
@@ -28,11 +27,8 @@ const NavigationBarScreen = ({navigation}) => {
         </View>
       </View>
       <ScrollView
-        style={{flex: 1, backgroundColor: '#e5e5e5'}}
-        contentContainerStyle={{
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}>
+        style={styles.scrollView}
+        contentContainerStyle={styles.scrollViewContainer}>
         <TouchableOpacity onPress={() => navigation.navigate('MyTabs')}>
           <Text style={styles.dashboard}>DashBoard</Text>
         </TouchableOpacity>

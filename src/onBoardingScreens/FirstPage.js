@@ -1,6 +1,5 @@
 import React from 'react';
 import {View, Image, Text, TouchableOpacity} from 'react-native';
-
 import styles from './FirstPage.componenet.style';
 import BigTextForm from '../components/BigTextForm';
 import LittleTextForm from '../components/LittleTextForm';
@@ -9,11 +8,10 @@ const FirstPage = ({navigation}) => {
     <View style={styles.container}>
       <View style={styles.fixScreen}>
         <TouchableOpacity
-          style={{alignSelf: 'flex-end'}}
+          style={styles.skipT}
           onPress={() => navigation.navigate('Login')}>
           <Text style={styles.skip}>Skip{'>>'}</Text>
         </TouchableOpacity>
-
         <View style={styles.imagContainer}>
           <Image
             style={styles.image}
