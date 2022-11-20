@@ -1,8 +1,7 @@
 import React from 'react';
-import {Text, View, TouchableHighlight} from 'react-native';
+import {Text, View} from 'react-native';
 import HamburgerForm from '../components/HamburgerForm';
-import styles from './CharScreen.component.style';
-import {Swipeable} from 'react-native-gesture-handler/Swipeable';
+import styles from './ChatScreen.component.style';
 import ChatForm from '../components/ChatForm';
 
 const ChatScreen = ({navigation}) => {

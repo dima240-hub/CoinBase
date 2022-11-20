@@ -24,7 +24,7 @@ const InputsForm = ({
         backgroundColor: colorInput1,
         ...styles.inputContainer,
       }}
-      style={{marginLeft: 20}}
+      style={styles.marginInput}
       placeholder={placeholder}
       placeholderTextColor={'rgba(0,0,0,0.7)'}
       rightIcon={() => {

@@ -1,15 +1,18 @@
 import {StyleSheet} from 'react-native';
-import {Dimensions} from 'react-native';
-const windowHeight = Dimensions.get('window').height;
-const windowWidth = Dimensions.get('window').width;
+
 export default StyleSheet.create({
+  container: {
+    width: '80%',
+    flexDirection: 'row',
+    alignSelf: 'center',
+  },
   buttonContainer: {
+    flex: 1,
     borderRadius: 10,
     justifyContent: 'center',
-    width: windowWidth * 0.55,
-    height: windowHeight * 0.07,
+    height: 50,
     alignSelf: 'center',
-    marginTop: windowHeight * 0.04,
+    marginTop: 30,
   },
   buttonText: {
     textAlign: 'center',

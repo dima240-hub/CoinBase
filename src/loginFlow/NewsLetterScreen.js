@@ -1,17 +1,16 @@
-import React, {useState} from 'react';
-import {View, Image, Text, TouchableOpacity} from 'react-native';
+import React from 'react';
+import {View, Image} from 'react-native';
 import BigTextForm from '../components/BigTextForm';
 import InputsForm from '../components/InputsForm';
 import ButtonsForm from '../components/ButtonsForm';
 import styles from './NewsLetter.component.style';
-import LinearGradient from 'react-native-linear-gradient';
 import {ScrollView} from 'react-native-gesture-handler';
 import LittleTextForm from '../components/LittleTextForm';
 import BackButtonForm from '../components/BackButtonForm';
 const NewsLetterScreen = ({navigation}) => {
   return (
     <ScrollView
-      style={{flex: 1, backgroundColor: '#e5e5e5'}}
+      style={styles.scrollView}
       contentContainerstyle={styles.container}>
       <BackButtonForm navigateTo={() => navigation.navigate('NavigationBar')} />
 
@@ -21,7 +20,7 @@ const NewsLetterScreen = ({navigation}) => {
           source={require('../../Images/newsletter.png')}
         />
       </View>
-      <View style={{marginBottom: 20}}>
+      <View style={styles.textMargin}>
         <BigTextForm
           text={`Subscribe to our${'\n'} newsletter to receive${'\n'} weekly updates`}
         />
@@ -35,7 +34,7 @@ const NewsLetterScreen = ({navigation}) => {
       <LittleTextForm
         text={`We hate spam just as much as you do ${'\n'}and will not spam your email.`}
       />
-      <View style={{marginBottom: 30}}>
+      <View style={styles.textMargin}>
         <ButtonsForm text="SUBSCRIBE" />
       </View>
     </ScrollView>

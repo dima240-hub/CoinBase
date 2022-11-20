@@ -1,7 +1,6 @@
 import React from 'react';
-import {View, Image, Text, TouchableOpacity} from 'react-native';
+import {View, Image, TouchableOpacity} from 'react-native';
 import BigTextForm from '../components/BigTextForm';
-import LinearGradient from 'react-native-linear-gradient';
 import styles from './ThreePage.component.style';
 import LittleTextForm from '../components/LittleTextForm';
 import ButtonsForm from '../components/ButtonsForm';
@@ -10,7 +9,6 @@ const ThreePage = ({navigation}) => {
     <View style={styles.container}>
       <View style={styles.fixScreen}>
         <TouchableOpacity
-          style={{alignSelf: 'flex-end'}}
           onPress={() => navigation.navigate('Login')}></TouchableOpacity>
         <View style={styles.imageContainer}>
           <Image
